@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="container" > <!--Boostrap para un mejor manejo, el contenido html esta contenida en un contenedor-->
+        <h1 class="colorear">Aplicacion Calculadora</h1>
+        <form id="formulario">
+            <div class="mb-3"> <!--Clase que separa los elementos dentro del div (no se necesita el salto de clase), mb significa margin butom y 3 la separacion-->
+                <label for="operando1" class="colorear">Operando 1</label>
+                <input type="number" class="form-control" id="operando1" placeholder="Escribe un num">
+            </div>
+                <div class="mb-3"> <!--Clase que separa los elementos dentro del div (no se necesita el salto de clase), mb significa margin butom y 3 la separacion-->
+                    <label for="operando2" class="colorear">Operando 2</label>
+                    <input type="number" class="form-control" id="operando2" placeholder="Escribe otro num">
+                </div>
+                <button type="reset" class="btn btn-primary2 mb-3">Resetear</button>
+        </form>
+        <div class="centrar">
+            <button class="btn btn-primary2 mb-3" onclick="Sumar()">Sumar</button> <!--Al ser un elemento de tipo submit(SE QUITA) se refresca el formulario a la pagina web debido a que no se procesa en un servidor, POR LO TANTO el boton va a ser un boton simple fuera del formulario html para que no se refresque, programando un evento en JS onclick para que se muestre la suma sin procesar el servidor-->
+            <button class="btn btn-primary2 mb-3" onclick="Restar()">Restar</button>
+            <button class="btn btn-primary2 mb-3" onclick="Multiplicar()">Multiplicar</button>
+            <button class="btn btn-primary2 mb-3" onclick="Dividir()">Dividir</button>
+            
+        </div>
+        <div class="res" id="res"></div>
+       
+    
+   <script src="back.js"></script> <!--Los archivos script se agregan invocandolos y poniendo la ubicacion en src-->
+   <script src="bootstrap.js"></script>
+</body>
+</html>
